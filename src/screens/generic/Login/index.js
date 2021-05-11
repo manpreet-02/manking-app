@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import { withTheme } from 'react-native-paper';
+import translation from '../../../common/translation';
+import { useTheme } from 'react-native-paper';
 
-const Login = ({navigation, theme}) => {
-// export default function Login({navigation, theme}) {
-  const { colors } = theme;
+export default function Login({navigation}) {
+  const { colors } = useTheme();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,8 +20,8 @@ const Login = ({navigation, theme}) => {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
-          placeholderTextColor={colors.primary}
+          placeholder={translation.Login.email}
+          placeholderTextColor={colors.black}
           onChangeText={emailText => setEmail(emailText)}
         />
       </View>
@@ -29,8 +29,8 @@ const Login = ({navigation, theme}) => {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
-          placeholderTextColor={colors.accent}
+          placeholder={translation.Login.password}
+          placeholderTextColor={colors.black}
           secureTextEntry={true}
           onChangeText={passwordText => setPassword(passwordText)}
         />
@@ -48,6 +48,3 @@ const Login = ({navigation, theme}) => {
     </View>
   );
 }
-
-
-export default withTheme(Login);
