@@ -1,0 +1,14 @@
+com/mankindapp/BuildConfig.java
+ com.mankindapp.BuildConfig
+com/mankindapp/MainApplication.java
+ com.mankindapp.MainApplication
+ com.mankindapp.MainApplication$1
+com/mankindapp/ReactNativeFlipper.java
+ com.mankindapp.ReactNativeFlipper
+ com.mankindapp.ReactNativeFlipper$1
+ com.mankindapp.ReactNativeFlipper$2
+ com.mankindapp.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/mankindapp/MainActivity.java
+ com.mankindapp.MainActivity

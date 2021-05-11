@@ -1,0 +1,6 @@
+module Pods_MankindApp {
+  umbrella header "Pods-MankindApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
