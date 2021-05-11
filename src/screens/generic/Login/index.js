@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import {Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
 import styles from './styles';
+import { withTheme } from 'react-native-paper';
 
-export default function Login({navigation}) {
+const Login = ({navigation, theme}) => {
+// export default function Login({navigation, theme}) {
+  const { colors } = theme;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -18,7 +21,7 @@ export default function Login({navigation}) {
         <TextInput
           style={styles.TextInput}
           placeholder="Email."
-          placeholderTextColor="#003f5c"
+          placeholderTextColor={colors.primary}
           onChangeText={emailText => setEmail(emailText)}
         />
       </View>
@@ -27,7 +30,7 @@ export default function Login({navigation}) {
         <TextInput
           style={styles.TextInput}
           placeholder="Password."
-          placeholderTextColor="#003f5c"
+          placeholderTextColor={colors.accent}
           secureTextEntry={true}
           onChangeText={passwordText => setPassword(passwordText)}
         />
@@ -45,3 +48,6 @@ export default function Login({navigation}) {
     </View>
   );
 }
+
+
+export default withTheme(Login);
